@@ -9,8 +9,13 @@ import Foundation
 
 // MARK: - Constant
 private let implementationBashShell = ImplementationBashShell()
-private let comand = "pwd"
+
+// specify command for bash
+private let comandBash = "pwd"
+
+// specify command for shell
+private let comandShell = "cd"
 
 // MARK: - Logic
-implementationBashShell.forBash(comand: comand)
-implementationBashShell.forShell(comand: comand)
+implementationBashShell.forBash(comand: comandBash)
+implementationBashShell.forShell(comand: comandShell)
