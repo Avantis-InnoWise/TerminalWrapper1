@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ErrorProcessing {
+final class ErrorProcessing {
     
     func safeExtraction(_ command: String, commandType: CommandType) throws -> String {
 // Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.

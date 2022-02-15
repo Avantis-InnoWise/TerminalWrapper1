@@ -7,17 +7,17 @@
 
 import Foundation
 
-class ImplementationBashShell {
+final class ImplementationBashShell {
     
     // MARK: - Properties
     private let caesarCliper = CaesarCipher()
     private let errorProcessing = ErrorProcessing()
     private let kw = "Swift"
     
-    func forShell() {
+    func forShell(comand: String) {
         do {
             // here we call our function and put an argument with shell/bash tool type
-            let emessage = caesarCliper.encrypt(text: "pwd", keyword: kw)
+            let emessage = caesarCliper.encrypt(text: comand, keyword: kw)
             debugPrint(emessage)
             let dmessage = caesarCliper.decrypt(text: emessage, keyword: kw)
             debugPrint(dmessage)
@@ -29,10 +29,10 @@ class ImplementationBashShell {
         }
     }
     
-    func forBash() {
+    func forBash(comand: String) {
         do {
             // the same thing like previous function call
-            let emessage = caesarCliper.encrypt(text: "pwd", keyword: kw)
+            let emessage = caesarCliper.encrypt(text: comand, keyword: kw)
             debugPrint(emessage)
             let dmessage = caesarCliper.decrypt(text: emessage, keyword: kw)
             debugPrint(dmessage)

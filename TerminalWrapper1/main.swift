@@ -7,8 +7,10 @@
 
 import Foundation
 
+// MARK: - Constant
 private let implementationBashShell = ImplementationBashShell()
+private let comand = "pwd"
 
 // MARK: - Logic
-implementationBashShell.forBash()
-implementationBashShell.forShell()
+implementationBashShell.forBash(comand: comand)
+implementationBashShell.forShell(comand: comand)
