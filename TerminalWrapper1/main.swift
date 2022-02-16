@@ -11,7 +11,7 @@ import Foundation
 private let implementationBashShell = ImplementationBashShell()
 
 // specify command for bash
-private let comandBash = "pwd"
+private let comandBash = "git describe --contains --all HEAD"
 
 // specify command for shell
 private let comandShell = "cd"
