@@ -5,4 +5,5 @@ HOW TO USE THE PROJECT
 2) Download the repository that contains the project file.
 3) Open xcodeproj file
 4) In the main file, I substitute the desired command into the comand constant, you execute the bash / shell command
-5) Сode contains description of each function
+5) Code contains description of each function
+
