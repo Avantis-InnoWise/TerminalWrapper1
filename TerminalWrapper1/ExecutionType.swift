@@ -1,5 +1,5 @@
 //
-//  ComandType.swift
+//  ExecutionType.swift
 //  TerminalWrapper1
 //
 //  Created by Николай on 15.02.22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// enum with CommandType
-enum CommandType {
+// enum with ExecutionType
+enum ExecutionType {
     case bash
     case shell
     

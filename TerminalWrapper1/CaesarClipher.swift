@@ -10,13 +10,13 @@ import Foundation
 final class CaesarCipher {
     
     // MARK: - Properties
-    //  Alphabet list
-    //  Creating the alphabet list is pretty simple. Create a new playground file and store each character in an array:
+    /* Alphabet list
+       Creating the alphabet list is pretty simple. Create a new playground file and store each character in an array:*/
     private let alphabetList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
                                 "1", "2", "3", "4","5", "6", "7", "8", "9", "0", "-", "."]
     
-    //  The last step is to create both the encryption and decryption functions:
+    // The last step is to create both the encryption and decryption functions:
      func encrypt(text: String, keyword: String) -> String {
         let text = text.lowercased()
         let key = uniquekey(keyword: keyword)
@@ -56,7 +56,7 @@ final class CaesarCipher {
     
 }
     private extension CaesarCipher {
-    //  Generate a unique key
+    // Generate a unique key
      func uniquekey(keyword: String) -> String {
         var string = String()
         for character in keyword {
@@ -68,8 +68,8 @@ final class CaesarCipher {
         return string.lowercased()
     }
     
-    //  Create unique alphabet
-    //  We need to create a function to reverse the alphabet list. Which we will use in the shiftAlphabetList function.
+    /* Create unique alphabet
+      We need to create a function to reverse the alphabet list. Which we will use in the shiftAlphabetList function.*/
      func reversed(alphabet: [String]) -> [String] {
         var alphabet = alphabet
         var startIndex = alphabet.startIndex
@@ -93,7 +93,7 @@ final class CaesarCipher {
         return alphabet
     }
     
-    //  Next we create the shiftAlphabetList function which will leverage our reversed function.
+    // Next we create the shiftAlphabetList function which will leverage our reversed function.
     private func shiftAlphabetList(key: String) ->[String] {
         var alphabet = alphabetList
         
@@ -106,7 +106,7 @@ final class CaesarCipher {
         return reversed(alphabet: alphabet)
     }
     
-    //  Now we create a map function that will help encrypt or decrypt our messages.
+    // Now we create a map function that will help encrypt or decrypt our messages.
     private func mapMessage(reversed: [String]) -> (encryption: [String : String], decryption: [String : String]) {
         var encryption = [String : String]()
         var decryption = [String : String]()
