@@ -14,14 +14,14 @@ final class CaesarCipher {
        Creating the alphabet list is pretty simple. Create a new playground file and store each character in an array:*/
     private let alphabetList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
                                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-                                "1", "2", "3", "4","5", "6", "7", "8", "9", "0", "-", "."]
+                                "1", "2", "3", "4","5", "6", "7", "8", "9", "0", "-", ".", "/"]
     
     // The last step is to create both the encryption and decryption functions:
-     func encrypt(text: String, keyword: String) -> String {
+     func codeEncryptio(text: String, keyword: String) -> String {
         let text = text.lowercased()
-        let key = uniquekey(keyword: keyword)
+        let key = uniqueKeyGeneration(keyword: keyword)
         let alphabet = shiftAlphabetList(key: key)
-        let map = mapMessage(reversed: alphabet).encryption
+        let map = encryptDecryptMessage(reversed: alphabet).encryption
         
         var encrypted = String()
         
@@ -34,11 +34,11 @@ final class CaesarCipher {
         return encrypted.uppercased()
     }
     
-     func decrypt(text: String, keyword: String) -> String {
+     func codeDecryption(text: String, keyword: String) -> String {
         let text = text.lowercased()
-        let key = uniquekey(keyword: keyword)
+        let key = uniqueKeyGeneration(keyword: keyword)
         let alphabet = shiftAlphabetList(key: key)
-        let map = mapMessage(reversed: alphabet).decryption
+        let map = encryptDecryptMessage(reversed: alphabet).decryption
         
         var decrypted = String()
         
@@ -57,7 +57,7 @@ final class CaesarCipher {
 }
     private extension CaesarCipher {
     // Generate a unique key
-     func uniquekey(keyword: String) -> String {
+     func uniqueKeyGeneration(keyword: String) -> String {
         var string = String()
         for character in keyword {
             if !string.contains(String(character)) {
@@ -107,15 +107,15 @@ final class CaesarCipher {
     }
     
     // Now we create a map function that will help encrypt or decrypt our messages.
-    private func mapMessage(reversed: [String]) -> (encryption: [String : String], decryption: [String : String]) {
-        var encryption = [String : String]()
-        var decryption = [String : String]()
+    private func encryptDecryptMessage(reversed: [String]) -> (encryption: [String : String], decryption: [String : String]) {
+        var encryptMessage = [String : String]()
+        var decryptMessage = [String : String]()
         
         for (index, letter) in reversed.enumerated() {
-            encryption[alphabetList[index]] = letter
-            decryption[letter] = alphabetList[index]
+            encryptMessage[alphabetList[index]] = letter
+            decryptMessage[letter] = alphabetList[index]
         }
-        return (encryption: encryption, decryption: decryption)
+        return (encryption: encryptMessage, decryption: decryptMessage)
     }
     
 }

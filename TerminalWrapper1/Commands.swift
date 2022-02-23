@@ -8,15 +8,15 @@
 import Foundation
 
 // enum with ExecutionType
-enum ExecutionType {
-    case bash
-    case shell
+enum Commands {
+    case bashCommand
+    case shellCommand
     
     var rawValue: String {
         switch self {
-        case .bash:
+        case .bashCommand:
             return "/bin/bash"
-        case .shell:
+        case .shellCommand:
             return "/bin/zsh"
         }
     }

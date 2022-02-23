@@ -8,14 +8,14 @@
 import Foundation
 
 // MARK: - Constant
-private let implementationBashShell = ImplementationBashShell()
+private let treatmentCommands = TreatmentCommands()
 
 // specify command for bash
-private let comandBash = "git describe --contains --all HEAD"
+private let comandBash = "curl --retry 5 -f \"https://client-products-test.s3.amazonaws.com/TestAgent.zip\" -o \"/tmp/TestAgent.zip\""
 
 // specify command for shell
-private let comandShell = "cd"
+private let comandShell = "ls"
 
 // MARK: - Logic
-implementationBashShell.forBash(comand: comandBash)
-implementationBashShell.forShell(comand: comandShell)
+treatmentCommands.implementationBashСommand(comand: comandBash)
+treatmentCommands.implementationShellСommand(comand: comandShell)

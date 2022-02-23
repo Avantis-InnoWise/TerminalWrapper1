@@ -9,7 +9,7 @@ import Foundation
 
 final class ErrorProcessing {
     
-    func safeExtraction(_ command: String, commandType: ExecutionType) throws -> String {
+    func safeСonversion(_ commandName: String, Commands: Commands) throws -> String {
         /* Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
          A Process object creates a separate executable entity; it differs from Thread in that it does not share memory space with the process that creates it. */
        let process = Process()
@@ -25,8 +25,8 @@ final class ErrorProcessing {
        /* - c flag - Use Cscore processing of the scorefile
        The NSTask object converts both path and the strings in arguments to appropriate C-style strings (using fileSystemRepresentation) before passing them to the task via argv[] .
         The strings in arguments do not undergo shell expansion, so you do not need to do special quoting, and shell variables, such as $PWD, are not resolved.*/
-       process.arguments = ["-c", command]
-       process.executableURL = URL(fileURLWithPath: commandType.rawValue)
+       process.arguments = ["-c", commandName]
+       process.executableURL = URL(fileURLWithPath: Commands.rawValue)
        return try runTask(task: process, pipe: pipe)
    }
 
