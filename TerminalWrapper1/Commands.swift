@@ -7,7 +7,7 @@
 
 import Foundation
 
-// enum with ExecutionType
+// enumeration with command types
 enum Commands {
     case bashCommand
     case shellCommand

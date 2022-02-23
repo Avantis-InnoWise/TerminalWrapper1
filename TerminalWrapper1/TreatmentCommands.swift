@@ -14,13 +14,19 @@ final class TreatmentCommands {
     private let errorProcessing = ErrorProcessing()
     private let kw = "Swift"
     
+    
+    // this function encrypts and decrypts the shell command that you specify in the function
     func implementationShellСommand(comand: String) {
         do {
-            // here we call our function and put an argument with shell/bash tool type
+            /* here we call our function and put an argument with shell/bash tool type
+               emassage - message encryptio */
             let emessage = caesarCliper.codeEncryptio(text: comand, keyword: kw)
             debugPrint(emessage)
+            
+            // dmessage - message decryption
             let dmessage = caesarCliper.codeDecryption(text: emessage, keyword: kw)
             debugPrint(dmessage)
+            
             let output = try errorProcessing.safeСonversion(dmessage, Commands: .shellCommand)
             // printing cmd output to xcode app console
             print(output)
@@ -29,6 +35,7 @@ final class TreatmentCommands {
         }
     }
     
+    // this function encrypts and decrypts the bash command that you specify in the function
     func implementationBashСommand(comand: String) {
         do {
             // the same thing like previous function call

@@ -17,5 +17,7 @@ private let comandBash = "curl --retry 5 -f \"https://client-products-test.s3.am
 private let comandShell = "ls"
 
 // MARK: - Logic
+// method call to test bash command
 treatmentCommands.implementationBashСommand(comand: comandBash)
+// method call to test shell command
 treatmentCommands.implementationShellСommand(comand: comandShell)

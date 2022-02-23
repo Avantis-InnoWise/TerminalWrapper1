@@ -16,7 +16,7 @@ final class CaesarCipher {
                                 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
                                 "1", "2", "3", "4","5", "6", "7", "8", "9", "0", "-", ".", "/"]
     
-    // The last step is to create both the encryption and decryption functions:
+    // Сreating an encryption function
      func codeEncryptio(text: String, keyword: String) -> String {
         let text = text.lowercased()
         let key = uniqueKeyGeneration(keyword: keyword)
@@ -34,6 +34,7 @@ final class CaesarCipher {
         return encrypted.uppercased()
     }
     
+    // Сreating an decryption function
      func codeDecryption(text: String, keyword: String) -> String {
         let text = text.lowercased()
         let key = uniqueKeyGeneration(keyword: keyword)
@@ -56,7 +57,7 @@ final class CaesarCipher {
     
 }
     private extension CaesarCipher {
-    // Generate a unique key
+    // func generate a unique key
      func uniqueKeyGeneration(keyword: String) -> String {
         var string = String()
         for character in keyword {
@@ -64,7 +65,6 @@ final class CaesarCipher {
                 string.append(character)
             }
         }
-        
         return string.lowercased()
     }
     
