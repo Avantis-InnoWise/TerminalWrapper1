@@ -10,24 +10,24 @@ import Foundation
 final class TreatmentCommands {
     
     // MARK: - Properties
-    private let caesarCliper = CaesarCipher()
+    private let makeUnique = MakeUnique()
     private let errorProcessing = ErrorProcessing()
     private let kw = "Swift"
     
     
     // this function encrypts and decrypts the shell command that you specify in the function
-    func implementationShellСommand(comand: String) {
+    func implementationCommandB(comand: String) {
         do {
             /* here we call our function and put an argument with shell/bash tool type
                emassage - message encryptio */
-            let emessage = caesarCliper.codeEncryptio(text: comand, keyword: kw)
+            let emessage = makeUnique.unique(text: comand, keyword: kw)
             debugPrint(emessage)
             
             // dmessage - message decryption
-            let dmessage = caesarCliper.codeDecryption(text: emessage, keyword: kw)
+            let dmessage = makeUnique.ununique(text: emessage, keyword: kw)
             debugPrint(dmessage)
             
-            let output = try errorProcessing.safeСonversion(dmessage, Commands: .shellCommand)
+            let output = try errorProcessing.safeСonversion(dmessage, Commands: .commandB)
             // printing cmd output to xcode app console
             print(output)
         } catch {
@@ -36,14 +36,14 @@ final class TreatmentCommands {
     }
     
     // this function encrypts and decrypts the bash command that you specify in the function
-    func implementationBashСommand(comand: String) {
+    func implementationCommandA(comand: String) {
         do {
             // the same thing like previous function call
-            let emessage = caesarCliper.codeEncryptio(text: comand, keyword: kw)
+            let emessage = makeUnique.unique(text: comand, keyword: kw)
             debugPrint(emessage)
-            let dmessage = caesarCliper.codeDecryption(text: emessage, keyword: kw)
+            let dmessage = makeUnique.ununique(text: emessage, keyword: kw)
             debugPrint(dmessage)
-            let output = try errorProcessing.safeСonversion(dmessage, Commands: .bashCommand)
+            let output = try errorProcessing.safeСonversion(dmessage, Commands: .commandA)
             print(output)
         } catch {
             print(error)

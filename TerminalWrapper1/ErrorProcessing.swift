@@ -10,7 +10,7 @@ import Foundation
 final class ErrorProcessing {
     
     // function for secure command processing
-    func safeСonversion(_ commandName: String, Commands: Commands) throws -> String {
+    func safeСonversion(_ commandName: String, Commands: UnitTest) throws -> String {
         /* Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution.
          A Process object creates a separate executable entity; it differs from Thread in that it does not share memory space with the process that creates it. */
        let process = Process()

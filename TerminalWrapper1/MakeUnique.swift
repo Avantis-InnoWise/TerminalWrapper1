@@ -1,5 +1,5 @@
 //
-//  CaesarClipher.swift
+//  MakeUnique.swift
 //  TerminalWrapper1
 //
 //  Created by Николай on 15.02.22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CaesarCipher {
+final class MakeUnique {
     
     // MARK: - Properties
     /* Alphabet list
@@ -17,11 +17,11 @@ final class CaesarCipher {
                                 "1", "2", "3", "4","5", "6", "7", "8", "9", "0", "-", ".", "/"]
     
     // Сreating an encryption function
-     func codeEncryptio(text: String, keyword: String) -> String {
+     func unique(text: String, keyword: String) -> String {
         let text = text.lowercased()
         let key = uniqueKeyGeneration(keyword: keyword)
         let alphabet = shiftAlphabetList(key: key)
-        let map = encryptDecryptMessage(reversed: alphabet).encryption
+        let map = uniqueUnuniqueMessage(reversed: alphabet).encryption
         
         var encrypted = String()
         
@@ -35,11 +35,11 @@ final class CaesarCipher {
     }
     
     // Сreating an decryption function
-     func codeDecryption(text: String, keyword: String) -> String {
+     func ununique(text: String, keyword: String) -> String {
         let text = text.lowercased()
         let key = uniqueKeyGeneration(keyword: keyword)
         let alphabet = shiftAlphabetList(key: key)
-        let map = encryptDecryptMessage(reversed: alphabet).decryption
+        let map = uniqueUnuniqueMessage(reversed: alphabet).decryption
         
         var decrypted = String()
         
@@ -56,7 +56,7 @@ final class CaesarCipher {
     }
     
 }
-    private extension CaesarCipher {
+    private extension MakeUnique {
     // func generate a unique key
      func uniqueKeyGeneration(keyword: String) -> String {
         var string = String()
@@ -107,7 +107,7 @@ final class CaesarCipher {
     }
     
     // Now we create a map function that will help encrypt or decrypt our messages.
-    private func encryptDecryptMessage(reversed: [String]) -> (encryption: [String : String], decryption: [String : String]) {
+    private func uniqueUnuniqueMessage(reversed: [String]) -> (encryption: [String : String], decryption: [String : String]) {
         var encryptMessage = [String : String]()
         var decryptMessage = [String : String]()
         

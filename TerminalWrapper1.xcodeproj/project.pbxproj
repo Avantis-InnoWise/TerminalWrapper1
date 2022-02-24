@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D13CD88B27BA5C8D00C3402A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CD88A27BA5C8D00C3402A /* main.swift */; };
-		D159CC5827BBB588004F644C /* CaesarClipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D159CC5727BBB588004F644C /* CaesarClipher.swift */; };
-		D1D46C5E27BBD1F400DDC636 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D46C5D27BBD1F400DDC636 /* Commands.swift */; };
+		D159CC5827BBB588004F644C /* MakeUnique.swift in Sources */ = {isa = PBXBuildFile; fileRef = D159CC5727BBB588004F644C /* MakeUnique.swift */; };
+		D1D46C5E27BBD1F400DDC636 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D46C5D27BBD1F400DDC636 /* UnitTest.swift */; };
 		D1D46C6027BBD4CF00DDC636 /* ErrorProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D46C5F27BBD4CF00DDC636 /* ErrorProcessing.swift */; };
 		D1D46C6227BBD5BD00DDC636 /* TreatmentCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D46C6127BBD5BD00DDC636 /* TreatmentCommands.swift */; };
 /* End PBXBuildFile section */
@@ -29,8 +29,8 @@
 /* Begin PBXFileReference section */
 		D13CD88727BA5C8D00C3402A /* TerminalWrapper1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TerminalWrapper1; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13CD88A27BA5C8D00C3402A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		D159CC5727BBB588004F644C /* CaesarClipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesarClipher.swift; sourceTree = "<group>"; };
-		D1D46C5D27BBD1F400DDC636 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		D159CC5727BBB588004F644C /* MakeUnique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUnique.swift; sourceTree = "<group>"; };
+		D1D46C5D27BBD1F400DDC636 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		D1D46C5F27BBD4CF00DDC636 /* ErrorProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProcessing.swift; sourceTree = "<group>"; };
 		D1D46C6127BBD5BD00DDC636 /* TreatmentCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentCommands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +65,8 @@
 		D13CD88927BA5C8D00C3402A /* TerminalWrapper1 */ = {
 			isa = PBXGroup;
 			children = (
-				D159CC5727BBB588004F644C /* CaesarClipher.swift */,
-				D1D46C5D27BBD1F400DDC636 /* Commands.swift */,
+				D159CC5727BBB588004F644C /* MakeUnique.swift */,
+				D1D46C5D27BBD1F400DDC636 /* UnitTest.swift */,
 				D1D46C5F27BBD4CF00DDC636 /* ErrorProcessing.swift */,
 				D1D46C6127BBD5BD00DDC636 /* TreatmentCommands.swift */,
 				D13CD88A27BA5C8D00C3402A /* main.swift */,
@@ -132,10 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D159CC5827BBB588004F644C /* CaesarClipher.swift in Sources */,
+				D159CC5827BBB588004F644C /* MakeUnique.swift in Sources */,
 				D13CD88B27BA5C8D00C3402A /* main.swift in Sources */,
 				D1D46C6227BBD5BD00DDC636 /* TreatmentCommands.swift in Sources */,
-				D1D46C5E27BBD1F400DDC636 /* Commands.swift in Sources */,
+				D1D46C5E27BBD1F400DDC636 /* UnitTest.swift in Sources */,
 				D1D46C6027BBD4CF00DDC636 /* ErrorProcessing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

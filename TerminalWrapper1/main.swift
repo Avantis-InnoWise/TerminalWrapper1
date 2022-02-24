@@ -18,6 +18,6 @@ private let comandShell = "ls"
 
 // MARK: - Logic
 // method call to test bash command
-treatmentCommands.implementationBashСommand(comand: comandBash)
+treatmentCommands.implementationCommandA(comand: comandBash)
 // method call to test shell command
-treatmentCommands.implementationShellСommand(comand: comandShell)
+treatmentCommands.implementationCommandB(comand: comandShell)
