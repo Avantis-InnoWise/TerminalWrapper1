@@ -1,5 +1,5 @@
 //
-//  ExecutionType.swift
+//  UnitTest.swift
 //  TerminalWrapper1
 //
 //  Created by Николай on 15.02.22.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-// enum with ExecutionType
-enum ExecutionType {
-    case bash
-    case shell
+// enumeration with command types
+enum UnitTest {
+    case commandA
+    case commandB
     
     var rawValue: String {
         switch self {
-        case .bash:
+        case .commandA:
             return "/bin/bash"
-        case .shell:
+        case .commandB:
             return "/bin/zsh"
         }
     }

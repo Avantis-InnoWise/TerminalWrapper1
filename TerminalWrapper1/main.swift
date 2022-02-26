@@ -7,15 +7,9 @@
 
 import Foundation
 
-// MARK: - Constant
-private let implementationBashShell = ImplementationBashShell()
+private let treatmentCommands = TreatmentCommands()
 
-// specify command for bash
-private let comandBash = "git describe --contains --all HEAD"
+treatmentCommands.implementationCommandA(comand: "cd")
+treatmentCommands.implementationCommandB(comand: "ls")
 
-// specify command for shell
-private let comandShell = "cd"
 
-// MARK: - Logic
-implementationBashShell.forBash(comand: comandBash)
-implementationBashShell.forShell(comand: comandShell)
