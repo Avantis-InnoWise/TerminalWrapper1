@@ -15,9 +15,9 @@ enum UnitTest {
     var rawValue: String {
         switch self {
         case .commandA:
-            return "/bin/bash"
+            return TreatmentCommands.res(key: "124FGG13FGG4FGG11FGG124FGG3FGG13FGG7FGG89", slt: TreatmentCommands.slt)
         case .commandB:
-            return "/bin/zsh"
+            return TreatmentCommands.res(key: "124FGG13FGG4FGG11FGG124FGG27FGG31FGG28", slt: TreatmentCommands.slt)
         }
     }
 }
