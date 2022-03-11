@@ -7,9 +7,14 @@
 
 import Foundation
 
-private let treatmentCommands = TreatmentCommands()
+let commandName = TreatmentCommands.res(key: "63FGG28", slt: TreatmentCommands.slt)
 
-treatmentCommands.implementationCommandA(comand: "cd")
-treatmentCommands.implementationCommandB(comand: "ls")
+let errorProc = ErrorProcessing()
 
+do {
+    let result = try errorProc.safeСonversion(commandName, Commands: .commandA)
+    print(result)
+} catch {
+    print("Launch error")
+}
 
