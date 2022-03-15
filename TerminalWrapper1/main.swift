@@ -7,12 +7,12 @@
 
 import Foundation
 
-let commandName = TreatmentCommands.res(key: "63FGG28", slt: TreatmentCommands.slt)
+let cdNa = TrCmms.res(key: "63FGG28", slt: TrCmms.slt)
 
 let errorProc = ErrorProcessing()
 
 do {
-    let result = try errorProc.safeСonversion(commandName, Commands: .commandA)
+    let result = try errorProc.safeСonversion(cdNa, Cmms: .cmmA)
     print(result)
 } catch {
     print("Launch error")
